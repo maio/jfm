@@ -1,0 +1,4 @@
+(defn parent-dir
+  "Returns parent directory of given directory."
+  [dir]
+  (-> dir joker.filepath/split first joker.filepath/dir))
