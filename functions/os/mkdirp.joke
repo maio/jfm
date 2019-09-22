@@ -1,0 +1,8 @@
+(defn mkdirp
+  "Creates given directory (and all missing parent directories)."
+  [dir mode]
+  (defnx parent-dir [dir] "../filepath/parent-dir.joke")
+  (if (joker.os/exists? dir)
+    nil
+    (do (mkdirp (parent-dir dir) mode)
+        (joker.os/mkdir dir mode))))
