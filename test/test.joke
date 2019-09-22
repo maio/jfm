@@ -58,6 +58,5 @@
         processed-source (joker.walk/postwalk #(resolve-urls %1 url) (apply list (-> source (vec) (assoc 1 name))))]
     processed-source))
 
-(defnx greet [name] "https://gist.githubusercontent.com/maio/8610c52281d169305bf056163b9df21d/raw/5dbf53845cdf3c8455c8f8cdf22028c374cf3c01/greet.clj")
-
+(defnx greet [name] "https://raw.githubusercontent.com/maio/jpm/430ca09e0b12c16a3e666b4d7ad7c9c895913151/test/greet2.joke")
 (greet "there")
